@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ConvertidorMonetario</string>
+    <string name="ConvertirString">Convertir</string>
+    <string name="ValorAConvertirString">Valor a convertir</string>
+    <string name="DolaresAColonesString">Dólares a colones</string>
+    <string name="ColonesADolaresString">Colones a dólares</string>
+</resources>

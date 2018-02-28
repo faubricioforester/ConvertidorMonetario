@@ -7,13 +7,16 @@
     tools:context="com.example.faubricio.convertidormonetario.MainActivity">
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="25dp">
+        android:id="@+id/relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textViewResult"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -28,10 +31,11 @@
             android:id="@+id/valueEditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/textView"
+            android:layout_above="@+id/textViewResult"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="13dp"
             android:ems="10"
+            android:gravity="center_horizontal"
             android:hint="@string/ValorAConvertirString"
             android:inputType="number" />
 
@@ -39,12 +43,14 @@
             android:id="@+id/convertButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textView"
+            android:layout_below="@+id/textViewResult"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="75dp"
+            android:onClick="convertirClicked"
             android:text="@string/ConvertirString" />
 
         <RadioGroup
+            android:id="@+id/radioGroupOptions"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -52,7 +58,7 @@
             android:layout_marginTop="34dp">
 
             <RadioButton
-                android:id="@+id/radioButton"
+                android:id="@+id/radioButtonDC"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="46dp"
@@ -60,7 +66,7 @@
                 android:text="@string/DolaresAColonesString" />
 
             <RadioButton
-                android:id="@+id/radioButton2"
+                android:id="@+id/radioButtonCD"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13dp"
